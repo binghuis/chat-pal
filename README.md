@@ -1,91 +1,125 @@
-# ✨ Syncia - Power of GPT on Any Site
+<div align="center">
+<img src="public/icon-128.png" alt="logo"/>
+<h1> Chrome Extension Boilerplate with<br/>React + Vite + TypeScript + TailwindCSS</h1>
 
-Syncia is a Chrome extension that enables users to chat with ChatGPT by opening a sidebar on any website by using the shortcut `ctrl+shift+x`. In addition, it provides a floating menu underneath any selected text on any website that allows users to generate text summaries, check grammar issues, and customize text length.
+<h2>
+This is a side product of my Chrome Extension <a target="_blank" rel="noopener noreferrer" href="https://chrome.google.com/webstore/detail/supatabs/icbcnjlaegndjabnjbaeihnnmidbfigk">Supatabs</a>.
+Supatabs is a 🔥🔥 BLAZINGLY FAST 🔥🔥 free alternative to OneTab with support for chrome tab groups and searching through tabs.
+</h2>
 
-![Syncia preview](syncia.png)
+<h2>
+If you tend to have thousands of tabs open, are a OneTab user, or use any other tab manager 
+make sure to check it out <a target="_blank" rel="noopener noreferrer" href="https://chrome.google.com/webstore/detail/supatabs/icbcnjlaegndjabnjbaeihnnmidbfigk">here</a>!
+</h2>
+</div>
 
-## 🦾 Features
+## Table of Contents
 
-- 🗨️ Chat with ChatGPT through a sidebar.
-- 🔑 User your own Open AI API key.
-- 📜 Quick menu underneath any selected text which allows you to summarize, simplify language, translate, and more.
-- 💯 Fully customizable settings page.
-- 🎨 Has both light mode and dark mode !
-- 🔐 Secure and fully Free and open source forever. (Please consider giving this project a star 🌟 and contributing 💖 to support the project.)
-
-## 🐳 Installation
-
-You can install Syncia through the [Chrome Web Store](https://chrome.google.com/webstore/detail/syncia-power-of-chatgpt-o/bhdfllifdfodbkihgmahlfmddlmfdjak?hl=en&authuser=0).
-
-<a href="https://www.producthunt.com/posts/syncia?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-syncia" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=391311&theme=neutral" alt="Syncia - Power&#0032;of&#0032;GPT&#0032;on&#0032;Any&#0032;Website | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
-
-Alternatively, you can install Syncia manually by following these steps:
-
-1. Clone the repo / Download by clicking Clone button
-2. Run `yarn build`. this should create a `dist` folder (make sure you have nodejs and yarn installed on your device)
-3. Open Google Chrome and go to the "Extensions" page by typing "chrome://extensions/" in the address bar.
-4. Turn on "Developer mode" by toggling the switch in the top right corner of the page.
-5. Click on the "Load unpacked" button in the top left corner of the page.
-6. Select the `dist` folder. 
-
-## 💫 Usage
-
-To use Syncia, simply press the shortcut ctrl+shift+x on any website to open the sidebar and start chatting with ChatGPT. To use the text-related features, select the text on the website and click on the floating menu that appears underneath the selection.
-
-### Quick Menu
-
-When you select a text, a quick menu will appear with the following options:
-
-#### REVIEW SELECTION
-
-- Summarize
-- Simplify language
-- Translate
-- Key takeaways
-
-#### EDIT SELECTION
-
-- Fix spelling and grammar
-- Change tone
-- Make shorter
-- Make longer
-
-#### REPLY
-
-- Reply positively
-- Reply negatively
-- Needs information
-
-Note that these are default options and can be changed in the settings page.
-
-## 💖 Contributing
-
-Thank you to all the contributors who have helped make Syncia better! 👏
-
-[![Contributors](https://contrib.rocks/image?repo=Royal-lobster/Syncia)](https://github.com/Royal-lobster/Syncia/graphs/contributors)
-
-You can also contribute to the project by creating a pull request. please follow these steps:
-
-1. Fork the repository by clicking on the "Fork" button on this page.
-2. Clone your fork to your local machine.
-3. Create a new branch from the main branch with a descriptive name.
-4. Make your changes and commit them with a descriptive commit message.
-5. Push your branch to your fork.
-6. Create a pull request on this repository with a descriptive title and message.
-
-Checkout the [CONTRIBUTING.md](
-    https://github.com/Royal-lobster/Syncia/blob/main/CONTRIBUTING.md
-) file for more information. 
-
-## 🔎 Issues and Pull Requests
-
-[![GitHub issues](https://flat.badgen.net/github/issues/Royal-lobster/Syncia)](https://github.com/Royal-lobster/Syncia/issues)
-[![GitHub pull requests](https://flat.badgen.net/github/prs/Royal-lobster/Syncia)](https://github.com/Royal-lobster/Syncia/pulls)
-[![Contributors](https://flat.badgen.net/github/contributors/Royal-lobster/Syncia)](https://github.com/Royal-lobster/Syncia/graphs/contributors)
+- [Intro](#intro)
+- [Why another boilerplate?](#why)
+- [Features](#features)
+- [Usage](#usage)
+  - [Setup](#setup) 
+- [Tech Docs](#tech)
+- [Credit](#credit)
+- [Contributing](#contributing)
 
 
-If you encounter any issues while using Syncia or want to suggest new features, please create an issue on this repository. If you want to contribute to the project, please create a pull request for existing [Issues](https://github.com/Royal-lobster/Syncia/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc)
+## Intro <a name="intro"></a>
+This boilerplate is meant to be a quick start for creating chrome extensions using React, Typescript and Tailwind CSS.
 
-## 📦 License
+Built for:
+> For improved DX and rapid building vite and nodemon are used.
 
-Syncia is licensed under the MIT License. See the [LICENSE](https://github.com/Royal-lobster/Syncia/blob/main/LICENSE)
+> Chrome does not accept manifest v2 extensions since Jan 2022, therefore this template uses manifest v3.
+
+> Firefox + other browsers don't yet support manifest v3, so cross browser usage is not encouraged.
+
+* Read more about Chrome manifest v2 support [here](https://developer.chrome.com/docs/extensions/mv2/).
+* Read more about Firefox Manifest v3 support [here](https://discourse.mozilla.org/t/manifest-v3/94564).
+
+As soon as Firefox supports manifest v3, support will be added in this repo as well.
+
+Oh by the way ... I also implemented a chrome local/sync storage hook for react, which works well with this 
+template. [Check it out here](https://gist.github.com/JohnBra/c81451ea7bc9e77f8021beb4f198ab96).
+## Why another boilerplate? <a name="why"></a>
+I have used webpack react boilerplates and found it too hard to configure.
+
+Vite is actually mega easy to understand, which makes it easier to get into and to maintain for others.
+
+I couldn't find a boilerplate for React, TypeScript and Tailwind CSS. So here it is.
+
+## Features <a name="features"></a>
+- [React 18](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [ESLint](https://eslint.org/)
+- [Chrome Extension Manifest Version 3](https://developer.chrome.com/docs/extensions/mv3/intro/)
+
+## Usage <a name="usage"></a>
+
+### Setup <a name="setup"></a>
+1. Clone this repository.
+2. Change `name` and `description` in package.json => **Auto synchronize with manifest** 
+3. Run `yarn` or `npm i` (check your node version >= 16)
+4. Run `yarn dev` or `npm run dev`
+5. Load Extension on Chrome
+   1. Open - Chrome browser
+   2. Access - chrome://extensions
+   3. Check - Developer mode
+   4. Find - Load unpacked extension
+   5. Select - `dist` folder in this project (after dev or build)
+6. If you want to build in production, Just run `yarn build` or `npm run build`.
+
+### Customization
+As the template has **all** of the potential Chrome extension pages implemented, you likely have to 
+customize it to fit your needs.
+
+E.g. you don't want the newtab page to activate whenever you open a new tab:
+1. remove the directory `newtab` and its contents in `src/pages`
+2. remove the `newtab` rollup input in the `vite.config.ts`
+
+```ts
+//...
+build: {
+    outDir,
+    rollupOptions: {
+      input: {
+        devtools: resolve(pagesDir, 'devtools', 'index.html'),
+        panel: resolve(pagesDir, 'panel', 'index.html'),
+        background: resolve(pagesDir, 'background', 'index.ts'),
+        popup: resolve(pagesDir, 'popup', 'index.html'),
+        newtab: resolve(pagesDir, 'newtab', 'index.html'),  // <--- REMOVE THIS LINE
+        options: resolve(pagesDir, 'options', 'index.html'),
+      },
+      output: {
+        entryFileNames: (chunk) => `src/pages/${chunk.name}/index.js`,
+      },
+    },
+  },
+/...
+```
+
+CSS files in the `src/pages/*` directories are not necessary. They are left in there in case you want 
+to use it in combination with Tailwind CSS. **Feel free to delete them**.
+
+Tailwind can be configured as usual in the `tailwind.config.cjs` file. See doc link below.
+
+Note:
+content script bundler is added in ```./utils/plugins/build-content-script.ts``` as a custom plugin.
+https://github.com/JohnBra/vite-web-extension/issues/8
+
+# Tech Docs <a name="tech"></a>
+- [Vite Plugin](https://vitejs.dev/guide/api-plugin.html)
+- [Chrome Extension with manifest 3](https://developer.chrome.com/docs/extensions/mv3/)
+- [Rollup](https://rollupjs.org/guide/en/)
+- [Rollup-plugin-chrome-extension](https://www.extend-chrome.dev/rollup-plugin)
+- [Tailwind CSS](https://tailwindcss.com/docs/configuration)
+
+# Credit <a name="credit"></a>
+Heavily inspired by [Jonghakseo's vite chrome extension boilerplate](https://github.com/Jonghakseo/chrome-extension-boilerplate-react-vite). 
+It uses SASS instead of TailwindCSS if you want to check it out.
+
+# Contributing <a name="contributing"></a>
+Feel free to open PRs or raise issues!
