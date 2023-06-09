@@ -21,8 +21,8 @@ export default defineManifest(async (env) => ({
   commands: {
     'open-sidebar': {
       suggested_key: {
-        default: 'Ctrl+Shift+X',
-        mac: 'Command+Shift+X',
+        default: 'Ctrl+J',
+        mac: 'Command+J',
       },
       description: 'Open the sidebar',
     },
